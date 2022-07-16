@@ -1,0 +1,30 @@
+package br.com.constructor1.application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import br.com.constructor1.entities.Product;
+
+public class Program {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Product p = null;
+		
+		System.out.println("Enter data of products: ");
+		System.out.print("Name: ");
+		String name = sc.next();
+		System.out.print("Quantity: ");
+		int quantity = sc.nextInt();
+		System.out.print("Price: ");
+		double price = sc.nextDouble();
+		
+		p = new Product(name, quantity, price);
+		
+		System.out.println(p);
+	}
+
+}
